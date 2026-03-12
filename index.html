@@ -1,1 +1,186 @@
 
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yeasir Arafat Emon | Developer Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+
+    .typing { border-right: .15em solid #00FFAB; white-space: nowrap; overflow: hidden; }
+    .float-circle { position: absolute; border-radius: 50%; opacity: 0.1; animation: float 12s infinite ease-in-out; }
+    @keyframes float {0%{transform:translateY(0) translateX(0) scale(1);}50%{transform:translateY(-50px) translateX(50px) scale(1.2);}100%{transform:translateY(0) translateX(0) scale(1);}}
+    .reveal { opacity: 0; transform: translateY(50px); transition: all 1s ease; }
+    .reveal.active { opacity: 1; transform: translateY(0); }
+    .btn-glow { position: relative; overflow: hidden; z-index: 1; }
+    .btn-glow::before {
+      content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
+      background: linear-gradient(45deg, #00FFAB, #9D00FF, #FF0080, #00FFAB);
+      background-size: 400% 400%; filter: blur(30px); animation: glow 8s linear infinite;
+      z-index: -1; opacity: 0.7;
+    }
+    @keyframes glow {0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+  </style>
+</head>
+<body class="bg-gray-900 text-white transition-colors duration-500">
+
+<!-- Theme toggle -->
+<div class="fixed top-4 right-4 z-50">
+  <button id="theme-toggle" class="bg-gray-800 hover:bg-gray-700 px-4 py-2 rounded-full shadow-lg">
+    <i class="fas fa-moon"></i>
+  </button>
+</div>
+
+<!-- Navbar -->
+<nav class="fixed w-full z-40 backdrop-blur-md bg-gray-900/70 border-b border-gray-700">
+  <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
+    <a href="#" class="text-2xl font-bold text-green-400">Emon</a>
+    <ul class="hidden md:flex space-x-8 text-gray-300 font-semibold">
+      <li><a href="#about" class="hover:text-green-400 transition">About</a></li>
+      <li><a href="#skills" class="hover:text-green-400 transition">Skills</a></li>
+      <li><a href="#projects" class="hover:text-green-400 transition">Projects</a></li>
+      <li><a href="#contact" class="hover:text-green-400 transition">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section id="hero" class="min-h-screen flex flex-col md:flex-row items-center justify-center px-6 md:px-20 relative overflow-hidden">
+  <div class="float-circle w-[500px] h-[500px] bg-green-500/10 top-[-100px] left-[-100px]"></div>
+  <div class="float-circle w-[400px] h-[400px] bg-purple-500/10 bottom-[50px] right-[50px]"></div>
+  <div class="float-circle w-[300px] h-[300px] bg-pink-500/10 top-[200px] right-[100px]"></div>
+
+  <div class="flex-1 text-center md:text-left space-y-4 reveal">
+    <h1 class="text-4xl md:text-6xl font-bold text-white">Hi, I'm Yeasir Arafat Emon</h1>
+    <h2 class="text-2xl md:text-3xl text-green-400 typing" id="typing"></h2>
+    <p class="text-gray-300 max-w-md mx-auto md:mx-0">I craft modern Android apps with clean code and beautiful UI/UX.</p>
+    <div class="flex flex-wrap justify-center md:justify-start gap-4 mt-4">
+      <a href="#projects" class="btn-glow text-black font-semibold px-6 py-3 rounded-lg">View Projects</a>
+      <a href="#contact" class="btn-glow text-white font-semibold px-6 py-3 rounded-lg">Contact Me</a>
+      <a href="https://github.com/yourgithub" target="_blank" class="btn-glow text-white font-semibold px-6 py-3 rounded-lg flex items-center gap-2"><i class="fab fa-github"></i> GitHub</a>
+      <a href="https://drive.google.com/yourresume" target="_blank" class="btn-glow text-white font-semibold px-6 py-3 rounded-lg">Download CV</a>
+    </div>
+  </div>
+
+  <div class="flex-1 mt-10 md:mt-0 flex justify-center md:justify-end reveal">
+    <img src="https://i.imgur.com/yourprofilepic.png" alt="Profile" class="w-60 h-60 rounded-full border-4 border-green-400 shadow-2xl">
+  </div>
+</section>
+
+<!-- About -->
+<section id="about" class="py-20 px-6 md:px-20 bg-gray-800/80 reveal">
+  <h2 class="text-4xl font-bold text-green-400 mb-6 text-center">About Me</h2>
+  <div class="max-w-4xl mx-auto text-center md:text-left space-y-4">
+    <p>I am a passionate developer with a diploma in engineering from Dhaka Polytechnic Institute. Recently completed a 3-month internship in software development, focusing on Android development and API integration.</p>
+    <p>I love building apps that are modern, responsive, and user-friendly.</p>
+    <p><strong>Education:</strong> Diploma in Engineering, Dhaka Polytechnic Institute<br>
+       <strong>Passion:</strong> Android Development, Problem Solving, Learning New Tech<br>
+       <strong>Skills:</strong> Java, Android Studio, Git, Databases
+    </p>
+  </div>
+</section>
+
+<!-- Skills -->
+<section id="skills" class="py-20 px-6 md:px-20 bg-gray-900 reveal">
+  <h2 class="text-4xl font-bold text-green-400 mb-10 text-center">Skills</h2>
+  <div class="max-w-4xl mx-auto space-y-6">
+    <div><p class="font-semibold">Android Development <span class="float-right">90%</span></p>
+      <div class="w-full bg-gray-700 rounded-full h-4"><div class="bg-green-400 h-4 rounded-full" style="width:90%"></div></div>
+    </div>
+    <div><p class="font-semibold">Java <span class="float-right">85%</span></p>
+      <div class="w-full bg-gray-700 rounded-full h-4"><div class="bg-green-400 h-4 rounded-full" style="width:85%"></div></div>
+    </div>
+    <div><p class="font-semibold">API Integration <span class="float-right">80%</span></p>
+      <div class="w-full bg-gray-700 rounded-full h-4"><div class="bg-green-400 h-4 rounded-full" style="width:80%"></div></div>
+    </div>
+    <div><p class="font-semibold">Git <span class="float-right">75%</span></p>
+      <div class="w-full bg-gray-700 rounded-full h-4"><div class="bg-green-400 h-4 rounded-full" style="width:75%"></div></div>
+    </div>
+    <div><p class="font-semibold">Databases <span class="float-right">70%</span></p>
+      <div class="w-full bg-gray-700 rounded-full h-4"><div class="bg-green-400 h-4 rounded-full" style="width:70%"></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Projects -->
+<section id="projects" class="py-20 px-6 md:px-20 bg-gray-800/80 reveal">
+  <h2 class="text-4xl font-bold text-green-400 mb-10 text-center">Projects</h2>
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
+    <div class="bg-gray-900/80 backdrop-blur-md rounded-2xl p-6 hover:scale-105 transition shadow-lg hover:shadow-2xl cursor-pointer" onclick="openModal('modal1')">
+      <img src="https://i.imgur.com/project1.png" class="rounded-lg mb-4">
+      <h3 class="text-2xl font-semibold text-green-400 mb-2">PDF Searcher App</h3>
+      <p class="text-gray-300">Click to view project details.</p>
+    </div>
+    <div class="bg-gray-900/80 backdrop-blur-md rounded-2xl p-6 hover:scale-105 transition shadow-lg hover:shadow-2xl cursor-pointer" onclick="openModal('modal2')">
+      <img src="https://i.imgur.com/project2.png" class="rounded-lg mb-4">
+      <h3 class="text-2xl font-semibold text-green-400 mb-2">Todo List App</h3>
+      <p class="text-gray-300">Click to view project details.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Modal 1 -->
+<div id="modal1" class="fixed inset-0 bg-black/70 flex items-center justify-center hidden z-50">
+  <div class="bg-gray-900 rounded-xl p-6 max-w-lg w-full relative">
+    <button onclick="closeModal('modal1')" class="absolute top-4 right-4 text-gray-400 hover:text-white text-2xl">&times;</button>
+    <h3 class="text-2xl font-bold text-green-400 mb-4">PDF Searcher App</h3>
+    <img src="https://i.imgur.com/project1.png" class="rounded-lg mb-4">
+    <p class="text-gray-300 mb-4">Search and organize PDF files efficiently on Android. APK & Google Play link included.</p>
+    <div class="flex gap-4">
+      <a href="https://drive.google.com/yourproject1.apk" target="_blank" class="btn-glow px-4 py-2 rounded-lg font-semibold text-white">Download APK</a>
+      <a href="https://play.google.com/store/apps/details?id=pdfsearcher" target="_blank" class="btn-glow px-4 py-2 rounded-lg font-semibold text-white">Google Play</a>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 2 -->
+<div id="modal2" class="fixed inset-0 bg-black/70 flex items-center justify-center hidden z-50">
+  <div class="bg-gray-900 rounded-xl p-6 max-w-lg w-full relative">
+    <button onclick="closeModal('modal2')" class="absolute top-4 right-4 text-gray-400 hover:text-white text-2xl">&times;</button>
+    <h3 class="text-2xl font-bold text-green-400 mb-4">Todo List App</h3>
+    <img src="https://i.imgur.com/project2.png" class="rounded-lg mb-4">
+    <p class="text-gray-300 mb-4">Manage daily tasks with reminders & offline storage. APK & Play Store link included.</p>
+    <div class="flex gap-4">
+      <a href="https://drive.google.com/yourproject2.apk" target="_blank" class="btn-glow px-4 py-2 rounded-lg font-semibold text-white">Download APK</a>
+      <a href="https://play.google.com/store/apps/details?id=todolist" target="_blank" class="btn-glow px-4 py-2 rounded-lg font-semibold text-white">Google Play</a>
+    </div>
+  </div>
+</div>
+
+<!-- Contact -->
+<section id="contact" class="py-20 px-6 md:px-20 bg-gray-900 reveal">
+  <h2 class="text-4xl font-bold text-green-400 mb-10 text-center">Contact Me</h2>
+  <div class="max-w-3xl mx-auto text-center space-y-6">
+    <p class="text-gray-300">Get in touch via email or connect on LinkedIn and GitHub.</p>
+    <div class="flex flex-wrap justify-center gap-4">
+      <a href="mailto:youremail@example.com" class="btn-glow px-6 py-3 rounded-lg font-semibold flex items-center gap-2"><i class="fas fa-envelope"></i> Email Me</a>
+      <a href="https://github.com/yourgithub" target="_blank" class="btn-glow px-6 py-3 rounded-lg font-semibold flex items-center gap-2"><i class="fab fa-github"></i> GitHub</a>
+      <a href="https://linkedin.com/in/yourlinkedin" target="_blank" class="btn-glow px-6 py-3 rounded-lg font-semibold flex items-center gap-2"><i class="fab fa-linkedin"></i> LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+<footer class="py-6 bg-gray-800 text-center text-gray-400">&copy; 2026 Yeasir Arafat Emon. All Rights Reserved.</footer>
+
+<script>
+const titles=["Aspiring Android Developer","Java Enthusiast","API Integrator","Problem Solver"];
+let i=0,j=0,isDeleting=false; const typing=document.getElementById('typing');
+function type(){let current=titles[i];if(!isDeleting){typing.textContent=current.substring(0,j+1);j++;if(j===current.length){isDeleting=true;setTimeout(type,1000);return;}}else{typing.textContent=current.substring(0,j-1);j--;if(j===0){isDeleting=false;i++;}}setTimeout(type,isDeleting?75:150);}type();
+
+const reveals=document.querySelectorAll('.reveal');
+window.addEventListener('scroll',()=>{for(let r of reveals){if(r.getBoundingClientRect().top<window.innerHeight-100) r.classList.add('active');}});
+
+const themeToggle=document.getElementById('theme-toggle');
+themeToggle.addEventListener('click',()=>{document.body.classList.toggle('bg-gray-900');document.body.classList.toggle('bg-white');document.body.classList.toggle('text-white');document.body.classList.toggle('text-gray-900');});
+
+function openModal(id){document.getElementById(id).classList.remove('hidden');}
+function closeModal(id){document.getElementById(id).classList.add('hidden');}
+window.addEventListener('click',function(e){if(e.target.id==='modal1') closeModal('modal1');if(e.target.id==='modal2') closeModal('modal2');});
+</script>
+
+</body>
+</html>
